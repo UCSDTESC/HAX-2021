@@ -1,53 +1,28 @@
 import React from 'react';
 import { Container, Button } from 'react-bootstrap';
 import styled from 'styled-components';
-import { Fade, Slide } from 'react-reveal';
-
-import BuildingBR from '../../assets/svg/building-hero-br.svg';
-import BuildingBL from '../../assets/svg/building-hero-bl.svg';
-import BuildingTL from '../../assets/svg/building-hero-tl.svg';
-import BuildingTR from '../../assets/svg/building-hero-tr.svg';
-import Logo from '../../assets/svg/hero-logo.svg';
-import { Parallax } from 'react-scroll-parallax';
 
 const Hero = () => {
     return (
         <HeroWrapper>
             <Container>
-                <Fade>
-                    <img src={Logo} alt="logo" className="hero-logo" />
-                    <div className="cta">
-                        <h1 className="mb-4">
-                            Completely
-                            <br />
-                            Virtual
-                        </h1>
-                        <Button
-                            size="lg"
-                            href="https://sd-hacks-2021.devpost.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="mt-3"
-                        >
-                            Devpost
-                        </Button>
-                    </div>
-                </Fade>
+                <div className="cta">
+                    <h1 className="mb-4">
+                        Completely
+                        <br />
+                        Virtual
+                    </h1>
+                    <Button
+                        size="lg"
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-3"
+                    >
+                        Coming Soon
+                    </Button>
+                </div>
             </Container>
-
-            <Parallax className="building-TR" y={[100, 0]}>
-                <img src={BuildingTR} alt="" />
-            </Parallax>
-            <Slide right>
-                <img src={BuildingBR} alt="" className="building-BR" />
-            </Slide>
-
-            <Parallax className="building-BL" y={[0, 50]}>
-                <img src={BuildingBL} alt="" />
-            </Parallax>
-            <Slide left>
-                <img src={BuildingTL} className="building-TL" alt="" />
-            </Slide>
         </HeroWrapper>
     );
 };

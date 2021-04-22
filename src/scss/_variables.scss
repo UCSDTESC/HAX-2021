@@ -1,11 +1,5 @@
 $theme-colors: (
-    'orange': #e15c35,
-    'orange-light': #fedbce,
-    'cyan': #44b5c5,
-    'green': #81cb72,
-    'dark': #191826,
-    'primary': #e15c35,
-    'gray': #393744,
+    
 );
 
 $container-max-widths: (
@@ -14,26 +8,6 @@ $container-max-widths: (
     lg: 960px,
     xl: 1516px,
 );
-
-$enable-shadows: true;
-$enable-responsive-font-sizes: true;
-
-$font-family-base: 'Trap', sans-serif;
-$font-size-base: $font-size-base * 1.5;
-
-$navbar-padding-y: $spacer * 2;
-$navbar-nav-link-padding-x: 1em;
-$navbar-brand-font-size: 40px;
-$navbar-light-color: theme-color('orange');
-$navbar-light-hover-color: theme-color('dark');
-
-$navbar-light-brand-color: $navbar-light-color;
-
-$modal-inner-padding: 3rem;
-$modal-content-bg: theme-color('green');
-$modal-header-border-width: 0;
-$modal-content-border-radius: 26px;
-$modal-fade-transform: none;
 
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
