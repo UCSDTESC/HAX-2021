@@ -2,35 +2,39 @@ import React from 'react';
 import { Container, Button } from 'react-bootstrap';
 import styled from 'styled-components';
 
+import Logo from '../../assets/images/Home/Hero/logo.svg';
+import Eggs from '../../assets/images/Home/Hero/eggs.svg';
+
 const Hero = () => {
     return (
         <HeroWrapper>
             <Container>
                 <div className="cta">
-                    <h1 className="mb-4">
-                        Completely
-                        <br />
-                        Virtual
+                    <img src={Logo} alt="logo" className="hero-logo" />
+                    <h1 className="mt-2">
+                        April 26 - 27, 2021
                     </h1>
                     <Button
                         size="lg"
                         href="#"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-3"
+                        className="mt-2"
                     >
-                        Coming Soon
+                        Register Now
                     </Button>
                 </div>
+                
             </Container>
+
+            <img className="eggs" src={Eggs} alt="Eggs" />
         </HeroWrapper>
     );
 };
 
 const HeroWrapper = styled.section`
-    height: 85vh;
-    min-height: 800px;
-    background-color: var(--orange-light);
+    height: 100vh;
+    background-color: var(--orange);
     position: relative;
 
     .container {
@@ -41,91 +45,35 @@ const HeroWrapper = styled.section`
         height: 100%;
     }
 
-    .hero-logo {
-        width: 40%;
-
-        @media (max-width: 576px) {
-            width: 70%;
-        }
-    }
-
     .cta {
         z-index: 1;
         text-align: center;
         margin-top: 1rem;
 
+        .hero-logo {
+            width: 100%;
+    
+            @media (max-width: 576px) {
+                width: 70%;
+            }
+        }
+
         h1 {
-            font-weight: 800;
-            font-size: clamp(2rem, 15vw, 5rem);
+            color: var(--white);
+            font-weight: 300;
+            font-size: 40px;
+        }
+        
+        button {
+            border-radius: 43px;
         }
     }
 
-    .building-BR {
+    .eggs {
         position: absolute;
-        bottom: -25%;
+        top: 0;
         right: 0;
-        width: 20%;
-        z-index: 1;
-
-        @media (max-width: 576px) {
-            display: none;
-        }
-    }
-
-    .building-BL {
-        position: absolute;
-        bottom: -5%;
-        left: 10%;
-        z-index: 1;
-        animation: float 5s ease 2s infinite;
-
-        img {
-            width: 25vw;
-        }
-
-        @media (max-width: 576px) {
-            display: none;
-        }
-    }
-
-    .building-TR {
-        position: absolute;
-        top: 6%;
-        right: 7%;
-        animation: float 5s infinite;
-
-        img {
-            width: 20vw;
-        }
-
-        @media (max-width: 576px) {
-            display: none;
-        }
-    }
-
-    .building-TL {
-        position: absolute;
-        top: 0%;
-        left: -3.5%;
-        width: 15%;
-
-        @media (max-width: 576px) {
-            display: none;
-        }
-    }
-
-    @keyframes float {
-        from {
-            transform: translateY(0px);
-        }
-
-        50% {
-            transform: translateY(20px);
-        }
-
-        to {
-            transform: translateY(0);
-        }
+        width: 40%;
     }
 `;
 
