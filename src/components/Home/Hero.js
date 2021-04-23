@@ -24,10 +24,8 @@ const Hero = () => {
                         Register Now
                     </Button>
                 </div>
-                
+                <img className="eggs" src={Eggs} alt="Eggs" />
             </Container>
-
-            <img className="eggs" src={Eggs} alt="Eggs" />
         </HeroWrapper>
     );
 };
@@ -51,7 +49,7 @@ const HeroWrapper = styled.section`
         margin-top: 1rem;
 
         .hero-logo {
-            width: 100%;
+            width: 19vw;
     
             @media (max-width: 576px) {
                 width: 70%;
@@ -61,7 +59,7 @@ const HeroWrapper = styled.section`
         h1 {
             color: var(--white);
             font-weight: 300;
-            font-size: 40px;
+            font-size: 2.5vw;
         }
         
         button {
@@ -73,7 +71,11 @@ const HeroWrapper = styled.section`
         position: absolute;
         top: 0;
         right: 0;
-        width: 40%;
+        height: 100vh;
+
+        @media (max-width: 576px) {
+            display: none;
+        }
     }
 `;
 
